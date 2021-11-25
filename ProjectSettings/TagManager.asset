@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MainMenu
+  - ResultsScreen
+  - Level1
+  - Tutorial
+  - GameOver
+  - ReplayLast
+  - NextLevel
   layers:
   - Default
   - TransparentFX
