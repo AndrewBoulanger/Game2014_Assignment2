@@ -694,6 +694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTimeInMinutes: 10
   gameTimerText: {fileID: 8806917692145352449}
+  player: {fileID: 0}
+  pawnPoint: {fileID: 0}
 --- !u!4 &245175718
 Transform:
   m_ObjectHideFlags: 0
@@ -4935,13 +4937,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1643072278}
     m_Modifications:
+    - target: {fileID: 13105424, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
+      propertyPath: MoveToPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 13105424, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
+      propertyPath: MoveToPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 966490222497302348, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 966490222497302348, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.06199
+      value: 103.64
       objectReference: {fileID: 0}
     - target: {fileID: 966490222497302348, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8967,6 +8977,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1643072278}
     m_Modifications:
+    - target: {fileID: 13105424, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
+      propertyPath: MoveToPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 13105424, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
+      propertyPath: MoveToPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 966490222497302348, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -90,9 +90,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float FlipAnimation(float x)
     {
-        x = (x >= 0) ? 1 : -1;
-
-       transform.localScale = new Vector3(x * transform.localScale.x, transform.localScale.y);
+        float size = Mathf.Abs(transform.localScale.x);
+        x = (x >= 0) ? size : -size;
+       transform.localScale = new Vector3(x , transform.localScale.y);
 
         return x;
     }

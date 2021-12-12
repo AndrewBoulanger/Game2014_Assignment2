@@ -36,6 +36,8 @@ public class LevelManager : MonoBehaviour
 
     int coins = 0;
 
+    [SerializeField]
+    GameObject player, pawnPoint;
 
     private void Awake()
     {
