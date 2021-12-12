@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7546512784951895878}
   - component: {fileID: 7546512784951895877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gummyEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

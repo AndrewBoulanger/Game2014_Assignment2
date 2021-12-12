@@ -11,6 +11,11 @@ TagManager:
   - GameOver
   - ReplayLast
   - NextLevel
+  - Platform
+  - Hazard
+  - Coin
+  - Goal
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,9 +23,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Platforms
+  - Enemy
   - 
   - 
   - 

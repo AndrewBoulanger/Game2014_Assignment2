@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7679801058644064363}
   - component: {fileID: 7679801058644064360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DevilEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

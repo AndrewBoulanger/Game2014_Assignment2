@@ -6,6 +6,7 @@
 /// 
 /// v.1 changes the text of the coins and time passed texts. time is formatted to display minutes and seconds
 ///
+/// last modified: nov 24th 2021
 //////////////////////////////
 
 using System.Collections;
@@ -19,7 +20,6 @@ public class ResultsScreenManager : MonoBehaviour
 {
     [SerializeField]
     Text  coinsText, timeText;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,5 +27,4 @@ public class ResultsScreenManager : MonoBehaviour
         int time = (int)LevelResults.EndTime;
         timeText.text = string.Format( "Play Time: {0}:{1:00}", time/60, time%60);
     }
-
 }
