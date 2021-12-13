@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGroundMovement : MonoBehaviour
+public class EnemyGroundMovement : EnemyMovement
 {
     [Header("Movement")]
     public float runForce;
@@ -11,16 +11,6 @@ public class EnemyGroundMovement : MonoBehaviour
     public LayerMask platformLayerMask;
     public bool isGroundAhead;
 
-    Rigidbody2D rigidbody;
-    Animator animator;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rigidbody = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-
-    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -36,7 +26,6 @@ public class EnemyGroundMovement : MonoBehaviour
         //ground check
         var hit = Physics2D.Linecast(transform.position, CheckGroundPoint.position, platformLayerMask);
         isGroundAhead = (hit) ? true : false;
-        print(isGroundAhead);
     }
 
     private void LookInFront()
@@ -48,11 +37,13 @@ public class EnemyGroundMovement : MonoBehaviour
         }
     }
 
-    private void MoveEnemy()
+    protected override void MoveEnemy() 
     {
         if (isGroundAhead)
         {
-            rigidbody.AddForce(Vector2.left * runForce * transform.localScale.x);
+            float mass = rigidbody.mass * rigidbody.gravityScale;
+            Vector2 direction = (transform.localScale.x < 0) ? Vector2.right : Vector2.left;
+            rigidbody.AddForce(direction * runForce * mass  );
             rigidbody.velocity *= 0.90f;
         }
         else
@@ -60,11 +51,6 @@ public class EnemyGroundMovement : MonoBehaviour
             Flip();
         }
 
-        animator.SetInteger("State", (int)EnemyAnimationStates.MOVING);
+    }
 
-    }
-    private void Flip()
-    {
-        transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-    }
 }

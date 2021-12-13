@@ -5,5 +5,5 @@ using UnityEngine;
 public enum EnemyAnimationStates 
 {
 
-    IDLE, MOVING, SQUISHED
+    MOVING, SQUISHED
 }
