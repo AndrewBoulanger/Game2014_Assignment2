@@ -35,7 +35,6 @@ public class SpikeBlockController : MonoBehaviour
     void MoveSpikes()
     {
         float pingPongValue = Mathf.PingPong(timer * speed, distance);
-        print(pingPongValue);
         spikes.position = new Vector2(startPosition.x, startPosition.y + pingPongValue);
 
         if(timer * speed >= distance * 2)

@@ -121,6 +121,12 @@ public class PlayerMovement : MonoBehaviour
         rigidbody.velocity = velocity;
     }
 
+    public void AddJumpVelocity()
+    {
+        rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
+        AddForce(0, verticalForce * 2);
+    }
+
     //player becomes invincible for a brief moment when damaged, but it ends when this timer is completed
     void UpdateIFrameTimer()
     {

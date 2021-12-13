@@ -26,4 +26,11 @@ public class DeathPlaneController : MonoBehaviour
             collision.gameObject.SetActive(false);
         }
     }
+
+
+    //if anything falls into it that isnt the player, and has a trigger collider
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.gameObject.SetActive(false);
+    }
 }
