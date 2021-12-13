@@ -32,12 +32,17 @@ public class LevelManager : MonoBehaviour
     float timeUpdateTimer = 0;
 
     [SerializeField]
-    Text gameTimerText;
+    Text gameTimerText, coinText;
 
     int coins = 0;
 
     [SerializeField]
-    GameObject player, pawnPoint;
+    PlayerMovement player;
+
+    [SerializeField]
+    HealthUIBehaviour healthUI;
+    const int MaxHearts = 3;
+    int hearts = MaxHearts;
 
     private void Awake()
     {
@@ -49,6 +54,8 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         LevelResults.MostRecentLevel = SceneManager.GetActiveScene().buildIndex;
+        player.OnCoinCollected.AddListener(OnCoinCollected);
+        player.OnHazardHit.AddListener(OnDamageTaken);
     }
 
 
@@ -74,6 +81,27 @@ public class LevelManager : MonoBehaviour
             LevelHasEnded(false);
         }
 
+    }
+
+    void OnCoinCollected()
+    {
+        coins++;
+        coinText.text = coins.ToString();
+        if(coins % 3 == 0 && hearts < MaxHearts)
+        {
+            hearts++;
+            healthUI.UpdateHeartContainers(hearts);
+        }
+    }
+
+    void OnDamageTaken()
+    {
+        hearts--;
+        healthUI.UpdateHeartContainers(hearts);
+        if(hearts <= 0)
+        {
+            LevelHasEnded(false);
+        }
     }
 
 

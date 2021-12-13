@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundOrigin;
     public float groundRadius;
     public LayerMask groundLayerMask;
+
+    [Header("Collision")]
+    public UnityEvent OnCoinCollected;
+    public UnityEvent OnHazardHit;
 
     // Start is called before the first frame update
     void Start()
@@ -116,6 +121,20 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             transform.SetParent(collision.transform, true);
+        }
+
+        if(collision.gameObject.CompareTag("Hazard"))
+        {
+            OnHazardHit.Invoke();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            collision.gameObject.SetActive(false);
+            OnCoinCollected.Invoke();
         }
     }
 
