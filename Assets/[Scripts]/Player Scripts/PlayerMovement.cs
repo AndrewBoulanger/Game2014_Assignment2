@@ -34,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Collision")]
     public UnityEvent OnCoinCollected;
     public UnityEvent OnHazardHit;
+    bool invincible = false;
+    float iframeTimer;
+    [SerializeField]
+    float iFrameDuration;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         Move();
 
         CheckIfGrounded();
+
+        UpdateIFrameTimer();
     }
 
     private void Move()
@@ -115,6 +121,20 @@ public class PlayerMovement : MonoBehaviour
         rigidbody.velocity = velocity;
     }
 
+    //player becomes invincible for a brief moment when damaged, but it ends when this timer is completed
+    void UpdateIFrameTimer()
+    {
+        if(invincible)
+        {
+            iframeTimer += Time.deltaTime;
+            if(iframeTimer >= iFrameDuration)
+            {
+                iframeTimer = 0f;
+                invincible = false;
+            }
+
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -123,9 +143,11 @@ public class PlayerMovement : MonoBehaviour
             transform.SetParent(collision.transform, true);
         }
 
-        if(collision.gameObject.CompareTag("Hazard"))
+        //when hit add invincibility frames
+        if(!invincible && collision.gameObject.CompareTag("Hazard"))
         {
             OnHazardHit.Invoke();
+            invincible = true;
         }
     }
 

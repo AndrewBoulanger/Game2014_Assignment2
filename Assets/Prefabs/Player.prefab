@@ -142,6 +142,13 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  OnCoinCollected:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHazardHit:
+    m_PersistentCalls:
+      m_Calls: []
+  iFrameDuration: 2
 --- !u!50 &3344429827422005768
 Rigidbody2D:
   serializedVersion: 4
