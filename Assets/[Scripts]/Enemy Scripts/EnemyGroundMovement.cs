@@ -9,19 +9,20 @@ public class EnemyGroundMovement : EnemyMovement
     public Transform CheckGroundPoint;
     public Transform lookInFrontPoint;
     public LayerMask platformLayerMask;
+    public LayerMask obstacleLayerMask;
     public bool isGroundAhead;
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        LookAhead();
+        LookForGround();
         LookInFront();
         MoveEnemy();
 
     }
 
-    private void LookAhead()
+    private void LookForGround()
     {
         //ground check
         var hit = Physics2D.Linecast(transform.position, CheckGroundPoint.position, platformLayerMask);
@@ -30,7 +31,7 @@ public class EnemyGroundMovement : EnemyMovement
 
     private void LookInFront()
     {
-        var hit = Physics2D.Linecast(transform.position, lookInFrontPoint.position, platformLayerMask);
+        var hit = Physics2D.Linecast(transform.position, lookInFrontPoint.position, obstacleLayerMask);
         if (hit)
         {
             Flip();
@@ -59,6 +60,10 @@ public class EnemyGroundMovement : EnemyMovement
         {
             transform.SetParent(collision.transform, true);
         }
+        else if(collision.gameObject.CompareTag("Hazard"))
+        {
+            Flip();
+        }
     }
 
-    }
+}

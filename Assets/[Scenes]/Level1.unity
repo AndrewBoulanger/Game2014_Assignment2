@@ -96906,11 +96906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7546512784951895878, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 137.09
+      value: 138.74
       objectReference: {fileID: 0}
     - target: {fileID: 7546512784951895878, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 9.26
       objectReference: {fileID: 0}
     - target: {fileID: 7546512784951895878, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -97942,6 +97942,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8769cb6b4d8af8643a168b9f70988cfa, type: 3}
+--- !u!1001 &6129652259020758196
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6129652258567945729, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_Name
+      value: LevelBGM
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 151.62321
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.890663
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.846134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129652258567945731, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 891a376a92104e440b56f6efa492d8b9, type: 3}
 --- !u!1001 &6536730762010887951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98107,10 +98164,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
-    - target: {fileID: 6920715622002583582, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
-      propertyPath: platformLayerMask.m_Bits
-      value: 384
-      objectReference: {fileID: 0}
     - target: {fileID: 7546512784951895876, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
       propertyPath: m_Name
       value: gummyEnemy
@@ -98168,10 +98221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
-    - target: {fileID: 1899611354, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
-      propertyPath: platformLayerMask.m_Bits
-      value: 384
-      objectReference: {fileID: 0}
     - target: {fileID: 7679801058644064361, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
       propertyPath: m_Name
       value: DevilEnemy
