@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 
 /// <summary>
@@ -44,6 +45,9 @@ public class LevelManager : MonoBehaviour
     const int MaxHearts = 3;
     int hearts = MaxHearts;
 
+    [SerializeField]
+    TreasureChestBehaviour goal;
+
     private void Awake()
     {
         startTimeInSeconds = (int)startTimeInMinutes * 60 + (int)(startTimeInMinutes % 1 * 100);
@@ -56,6 +60,7 @@ public class LevelManager : MonoBehaviour
         LevelResults.MostRecentLevel = SceneManager.GetActiveScene().buildIndex;
         player.OnCoinCollected.AddListener(OnCoinCollected);
         player.OnHazardHit.AddListener(OnDamageTaken);
+        goal.OnChestReached.AddListener(OnGoalReached);
     }
 
 
@@ -114,4 +119,9 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(sceneToLoad);
     }
     
+    void OnGoalReached()
+    {
+        LevelHasEnded(true);
+    }
+
 }

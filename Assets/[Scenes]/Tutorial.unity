@@ -617,6 +617,7 @@ MonoBehaviour:
   coinText: {fileID: 701696833}
   player: {fileID: 636798909}
   healthUI: {fileID: 28487656}
+  goal: {fileID: 1092954552}
 --- !u!4 &245175718
 Transform:
   m_ObjectHideFlags: 0
@@ -652,11 +653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3344429827422005774, guid: 6e747f3df9254694eaa398ac20c1bd24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.43
+      value: -5.99
       objectReference: {fileID: 0}
     - target: {fileID: 3344429827422005774, guid: 6e747f3df9254694eaa398ac20c1bd24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.88
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3344429827422005774, guid: 6e747f3df9254694eaa398ac20c1bd24, type: 3}
       propertyPath: m_LocalPosition.z
@@ -50355,7 +50356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908443250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.43, y: 2.88, z: -10}
+  m_LocalPosition: {x: -5.99, y: -1.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1470704641}
@@ -51028,6 +51029,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30aca5f7eae73d64a8b5de1b3a272da2, type: 3}
+--- !u!114 &1092954552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1092954552, guid: fe7b72f81a4e6a5428ee41a7c1f886a4, type: 3}
+  m_PrefabInstance: {fileID: 8048708291825659508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a015463af77f24bbe3a3d4b77f723b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1115024565
 GameObject:
   m_ObjectHideFlags: 0
@@ -51260,27 +51272,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b06d9513c0cd43b45a3bf40b6201985e, type: 3}
---- !u!1 &1237626567 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8809726525922281502, guid: eaec6b6bfacb2e44a90559b3473a8c17, type: 3}
-  m_PrefabInstance: {fileID: 451589353346035751}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1237626568
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237626567}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &1238662040
 GameObject:
   m_ObjectHideFlags: 0
@@ -51475,7 +51466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244441398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.43, y: 2.88, z: -10}
+  m_LocalPosition: {x: -5.99, y: -1.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -55341,14 +55332,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
-    - target: {fileID: 1724688063, guid: 8769cb6b4d8af8643a168b9f70988cfa, type: 3}
-      propertyPath: moveSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1724688071, guid: 8769cb6b4d8af8643a168b9f70988cfa, type: 3}
-      propertyPath: moveSpeed
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 3449897818548174432, guid: 8769cb6b4d8af8643a168b9f70988cfa, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -55621,10 +55604,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
-    - target: {fileID: 745768595, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7546512784951895876, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
       propertyPath: m_Name
       value: gummyEnemy
@@ -55682,14 +55661,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
-    - target: {fileID: 1899611354, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
-      propertyPath: runForce
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899611359, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7679801058644064361, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
       propertyPath: m_Name
       value: DevilEnemy

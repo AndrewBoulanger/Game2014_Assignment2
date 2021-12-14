@@ -262,6 +262,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54caf73cdad1e8f42847c687340bb199, type: 3}
+--- !u!114 &48190446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1092954552, guid: fe7b72f81a4e6a5428ee41a7c1f886a4, type: 3}
+  m_PrefabInstance: {fileID: 8048708291825659508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a015463af77f24bbe3a3d4b77f723b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &63511321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -689,6 +700,7 @@ MonoBehaviour:
   coinText: {fileID: 8806917692145352451}
   player: {fileID: 3344429826276632502}
   healthUI: {fileID: 8806917692145352450}
+  goal: {fileID: 48190446}
 --- !u!4 &215900645
 Transform:
   m_ObjectHideFlags: 0
@@ -5093,7 +5105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908443250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.18, y: -0.80400234, z: -10}
+  m_LocalPosition: {x: -4.95, y: -0.80400234, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1470704641}
@@ -6236,7 +6248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244441398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.18, y: -0.80400234, z: -10}
+  m_LocalPosition: {x: -4.95, y: -0.80400234, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97822,7 +97834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3344429827422005774, guid: 6e747f3df9254694eaa398ac20c1bd24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.18
+      value: -4.95
       objectReference: {fileID: 0}
     - target: {fileID: 3344429827422005774, guid: 6e747f3df9254694eaa398ac20c1bd24, type: 3}
       propertyPath: m_LocalPosition.y
@@ -98095,6 +98107,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
+    - target: {fileID: 6920715622002583582, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
+      propertyPath: platformLayerMask.m_Bits
+      value: 384
+      objectReference: {fileID: 0}
     - target: {fileID: 7546512784951895876, guid: 33284f1bf01bbfd4cae1936e676b15ac, type: 3}
       propertyPath: m_Name
       value: gummyEnemy
@@ -98152,6 +98168,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
+    - target: {fileID: 1899611354, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
+      propertyPath: platformLayerMask.m_Bits
+      value: 384
+      objectReference: {fileID: 0}
     - target: {fileID: 7679801058644064361, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
       propertyPath: m_Name
       value: DevilEnemy
