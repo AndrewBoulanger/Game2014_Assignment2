@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DevilEnemyBehaviour : MonoBehaviour
+public class AIStrategyController : MonoBehaviour
 {
     [SerializeField]
     LOS lineOfSight;

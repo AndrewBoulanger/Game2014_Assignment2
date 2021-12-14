@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774c702bb4cfb5a40a3eefdab36361c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runForce: 5
+  runForce: 7
   CheckGroundPoint: {fileID: 1599474110}
   lookInFrontPoint: {fileID: 1144813494}
   platformLayerMask:
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7679801058644064361}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9ed413223734a642b5aed35eac7abed, type: 3}
   m_Name: 

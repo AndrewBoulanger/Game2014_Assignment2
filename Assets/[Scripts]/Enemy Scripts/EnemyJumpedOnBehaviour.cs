@@ -21,9 +21,13 @@ public class EnemyJumpedOnBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && topCollider.IsTouching(collision))
         {
             collision.gameObject.GetComponent<PlayerMovement>().AddJumpVelocity();
+            gameObject.tag = "Enemy";
             GetComponent<CircleCollider2D>().isTrigger = true;
-            GetComponent<Rigidbody2D>().isKinematic = false;
-            GetComponent<EnemyGroundMovement>().enabled = false;
+            GetComponent<Rigidbody2D>().gravityScale = 3;
+            foreach (EnemyMovement m in GetComponents<EnemyMovement>())
+            {
+                m.enabled = false;
+            }
             animator.SetInteger("State", (int)EnemyAnimationStates.SQUISHED );
         }
 

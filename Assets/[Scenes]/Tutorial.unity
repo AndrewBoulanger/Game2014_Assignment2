@@ -55341,6 +55341,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
+    - target: {fileID: 1724688063, guid: 8769cb6b4d8af8643a168b9f70988cfa, type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1724688071, guid: 8769cb6b4d8af8643a168b9f70988cfa, type: 3}
+      propertyPath: moveSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3449897818548174432, guid: 8769cb6b4d8af8643a168b9f70988cfa, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -55674,6 +55682,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 629715872}
     m_Modifications:
+    - target: {fileID: 1899611354, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
+      propertyPath: runForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899611359, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7679801058644064361, guid: 389126ea8f04e0c46a69c93b8c09e284, type: 3}
       propertyPath: m_Name
       value: DevilEnemy
