@@ -1,3 +1,14 @@
+///////////////////////////////
+/// MovingPlatform.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: moves the platform from start position to a moveToPosition
+/// 
+/// v.1 lerps location via a pingponed value
+///
+/// last modified: dec 12th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

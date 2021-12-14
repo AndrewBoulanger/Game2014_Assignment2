@@ -1,3 +1,15 @@
+///////////////////////////////
+/// AIStrategyController.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: Uses line of sight and distance from the character to switch between patrol movement and chasing movement
+/// 
+/// v.1 added line of sight checks and mode swapping
+///
+/// last modified: Dec 13th 2021
+//////////////////////////////
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

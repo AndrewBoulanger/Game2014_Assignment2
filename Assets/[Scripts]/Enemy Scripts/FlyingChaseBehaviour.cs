@@ -1,3 +1,14 @@
+///////////////////////////////
+/// FlyingChaseBehaviour.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: chase behaviour for flying enemies, moves towards the player
+/// 
+/// v.1 moves the enemy towards the player on x and y axis, doesn't care about gravity.
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

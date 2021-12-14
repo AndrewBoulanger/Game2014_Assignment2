@@ -1,3 +1,15 @@
+///////////////////////////////
+/// SpikeBlockController.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: raises spikes when stepped on
+/// 
+/// v.1 collision with the player causes spikes to raise at the set speed. 
+/// uses a pingponged value and deactivates when the timer (based on the speed) should have returned to its original position
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

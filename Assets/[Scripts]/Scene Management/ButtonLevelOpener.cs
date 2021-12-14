@@ -6,8 +6,9 @@
 /// 
 /// v.1 originally opened based on a separate enum and static class combination. abandoned because adding to the enum ruined the order.
 /// v.2 opens a level based on the tag, with extra logic for the next level and replay options
+/// v.3 added sfx and a coroutine to make sure they play before loading a scene
 ///
-/// last modified: nov 24th 2021
+/// last modified: dec 13th 2021
 //////////////////////////////
 
 
@@ -23,6 +24,7 @@ public class ButtonLevelOpener : MonoBehaviour
 {
     private Button button;
 
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -33,33 +35,44 @@ public class ButtonLevelOpener : MonoBehaviour
         else
             Debug.Log("This object is not a button.");
 
-       
+       audio = GetComponent<AudioSource>();
     }
 
     //loads scene based on the tag. NextScene tag will load the next level in the build order until it reaches the results screen.
     //*There is an expectation that the scenes are ordered correctly and followed by the results screen in the build settings
     private void OnButtonPressed()
     {
-        string levelName = tag;
+        audio.Play();
+        StartCoroutine("WaitForSoundToPlay");
 
+    }
+
+    IEnumerator WaitForSoundToPlay()
+    {
+        yield return new WaitForEndOfFrame();
+        LoadLevel();
+    }
+
+    void LoadLevel()
+    {
+        string levelName = tag;
         if (levelName == "NextLevel")
         {
             //the next level button is only called on the results page, so if current index == next index you've run out of levels
-            if(LevelResults.MostRecentLevel + 1  >= SceneManager.GetActiveScene().buildIndex)
+            if (LevelResults.MostRecentLevel + 1 >= SceneManager.GetActiveScene().buildIndex)
                 SceneManager.LoadScene("MainMenu");
             else
-                SceneManager.LoadScene( LevelResults.MostRecentLevel + 1);
+                SceneManager.LoadScene(LevelResults.MostRecentLevel + 1);
         }
 
         else if (levelName == "ReplayLast")
         {
-            SceneManager.LoadScene( LevelResults.MostRecentLevel );
+            SceneManager.LoadScene(LevelResults.MostRecentLevel);
         }
         else
         {
             SceneManager.LoadScene(tag);
         }
-
     }
 
     private void OnDestroy()

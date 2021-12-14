@@ -1,3 +1,17 @@
+///////////////////////////////
+/// PlayerMovement.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: controls the player's basic movement, running and jumping and the associated inputs
+/// 
+/// v.1 adds impulse for jumping and running, changes animation state
+/// v.2 added some simple collisions: platforms, coins and hazards 
+/// v.3 added iFrames, so the player doesnt lose all health off of one hit
+/// v.4 added sound effects for coins, jumping and being hit
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,11 +53,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     float iFrameDuration;
 
+    [Header("SFX")]
+    [SerializeField]
+    AudioClip jumpSound, hitSound, jumpOffEnemySound, coinSound;
+    AudioSource SFXPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        SFXPlayer = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -74,6 +94,8 @@ public class PlayerMovement : MonoBehaviour
             //set animation state based on x input
             state = (x == 0) ? PlayerAnimationStates.IDLE : PlayerAnimationStates.MOVING;
 
+            if(jump > 0 && !SFXPlayer.isPlaying)
+                SFXPlayer.PlayOneShot(jumpSound);
 
             float horizontalMoveForce = x * horizontalForce;
             float jumpMoveForce = jump * verticalForce;
@@ -125,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0);
         AddForce(0, verticalForce * 2);
+        SFXPlayer.PlayOneShot(jumpOffEnemySound);
     }
 
     //player becomes invincible for a brief moment when damaged, but it ends when this timer is completed
@@ -154,6 +177,8 @@ public class PlayerMovement : MonoBehaviour
         {
             OnHazardHit.Invoke();
             invincible = true;
+            SFXPlayer.PlayOneShot(hitSound);
+            animator.SetInteger("State", (int)PlayerAnimationStates.HIT);
         }
     }
 
@@ -163,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             OnCoinCollected.Invoke();
+            SFXPlayer.PlayOneShot(coinSound);
         }
     }
 

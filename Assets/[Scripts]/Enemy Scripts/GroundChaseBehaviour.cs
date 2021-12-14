@@ -1,3 +1,15 @@
+///////////////////////////////
+/// EnemyFlyingMovement.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: chase behaviour for grounded enemies, moves towards the player
+/// 
+/// v.1 enemy moves towards the player, no longer caring about ledges or obstacles. has a target overcorrection 
+/// bool to make sure it doesnt stick to one spot when below or above the player
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

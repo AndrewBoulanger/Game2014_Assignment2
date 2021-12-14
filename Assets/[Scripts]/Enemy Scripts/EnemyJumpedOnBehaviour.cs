@@ -1,3 +1,16 @@
+///////////////////////////////
+/// EnemyJumpedOnBehaviour.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: attached to enemies that can be beaten when jumped on, checks for it and changes behaviour when it happens 
+/// 
+/// v.1 changes animation state and disables collision
+/// v.2 didnt intend to make it fall through the floor, but i think its funny so im keeping it. also disabled movement classes and added a 
+/// jump to the player.
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

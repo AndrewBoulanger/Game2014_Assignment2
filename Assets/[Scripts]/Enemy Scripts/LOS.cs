@@ -1,3 +1,14 @@
+///////////////////////////////
+/// LOS.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: line of sight data used by enemy AI classes
+/// 
+/// v.1 keeps track of los collision with the player in other classes (namely the AIStrategy class)
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

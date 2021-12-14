@@ -1,3 +1,14 @@
+///////////////////////////////
+/// EnemyMovement.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: baseClass to all enemy movement
+/// 
+/// v.1 gets rigidbody and animator, has the flip function and an abstract Move Enemy
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,3 +1,14 @@
+///////////////////////////////
+/// DeathPlaneController.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: determines what to do with things that fall off the level
+/// 
+/// v.1 players are returned to the spawn point, enemies are disabled
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

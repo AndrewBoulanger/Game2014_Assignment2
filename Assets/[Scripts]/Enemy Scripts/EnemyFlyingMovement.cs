@@ -1,3 +1,14 @@
+///////////////////////////////
+/// EnemyFlyingMovement.cs
+/// Author: Andrew Boulanger 101292574
+/// 
+/// description: patrol behaviour for flying enemies, moves between set points
+/// 
+/// v.1 enemy moves from point to point, returns to first point when they reach the end of the patrol points list
+///
+/// last modified: dec 13th 2021
+//////////////////////////////
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

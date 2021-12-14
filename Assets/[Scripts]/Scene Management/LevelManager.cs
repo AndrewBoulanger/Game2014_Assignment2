@@ -6,8 +6,9 @@
 /// and moves to the next level when this one ends (game over or results)
 /// 
 /// v.1 added scene transitions to be called when the game ends and a timer to end the game when it runs out. 
+/// v.2 listens to the player and chest to determine if the player picked up a coin, was damaged or reached the end of the level
 ///
-/// last modified: nov 24th 2021
+/// last modified: dec 13th 2021
 //////////////////////////////
 
 
